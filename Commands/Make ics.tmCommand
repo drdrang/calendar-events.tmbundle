@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+import sys
+from dateutil.parser import parse
+from dateutil.relativedelta import *
+
+print '''BEGIN:VCALENDAR
+VERSION:2.0'''
+
+for line in sys.stdin:
+  try:
+    event, sdtime, dur, place, desc = line.strip().split('|')
+    start = parse(sdtime)
+    end = start + relativedelta(hours=+float(dur))
+    print '''BEGIN:VEVENT
+DTSTART:%s
+DTEND:%s
+SUMMARY:%s
+LOCATION:%s
+DESCRIPTION:%s
+END:VEVENT''' % (start.strftime('%Y%m%dT%H%M00'), end.strftime('%Y%m%dT%H%M00'), event, place, desc)
+  except:
+    continue
+
+print 'END:VCALENDAR'
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^~@c</string>
+	<key>name</key>
+	<string>Make ics</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>scope</key>
+	<string>text.tabular.psv</string>
+	<key>uuid</key>
+	<string>86FC5CCE-33EA-4EA6-B3B7-9FC73FA1FFA2</string>
+</dict>
+</plist>

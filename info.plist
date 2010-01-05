@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Calendar Events</string>
+	<key>ordering</key>
+	<array>
+		<string>86FC5CCE-33EA-4EA6-B3B7-9FC73FA1FFA2</string>
+		<string>EB8C24E5-30CB-44B9-BC34-2E9D9E7BC45C</string>
+	</array>
+	<key>uuid</key>
+	<string>4205A806-EF00-4206-9DD7-BD3C9C2B0FF2</string>
+</dict>
+</plist>

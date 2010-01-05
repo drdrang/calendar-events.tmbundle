@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${1:Event}|${2:8/23}/${3:`date +%y`} ${4:9:00 am}|${5:1.00}|${6:Location}|${7:Description}</string>
+	<key>name</key>
+	<string>Event</string>
+	<key>scope</key>
+	<string>text.tabular.psv</string>
+	<key>tabTrigger</key>
+	<string>ev</string>
+	<key>uuid</key>
+	<string>EB8C24E5-30CB-44B9-BC34-2E9D9E7BC45C</string>
+</dict>
+</plist>
