@@ -31,7 +31,7 @@ END:VEVENT''' % (start.strftime('%Y%m%dT%H%M00'), end.strftime('%Y%m%dT%H%M00'),
 print 'END:VCALENDAR'
 </string>
 	<key>input</key>
-	<string>selection</string>
+	<string>document</string>
 	<key>keyEquivalent</key>
 	<string>^~@c</string>
 	<key>name</key>
