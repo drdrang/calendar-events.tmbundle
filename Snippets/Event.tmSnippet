@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${1:Event}|${2:8/23}/${3:`date +%y`} ${4:9:00 am}|${5:1.00}|${6:Location}|${7:Notes}</string>
+	<string>${1:Event}|${2:8/23}/${3:`date +%y`} ${4:9:00 am}|${5:1.00}|${6:Location}|${7:Notes}$0</string>
 	<key>name</key>
 	<string>Event</string>
 	<key>scope</key>
