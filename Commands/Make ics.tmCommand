@@ -55,7 +55,7 @@ print 'END:VCALENDAR'
 	<key>keyEquivalent</key>
 	<string>^~@c</string>
 	<key>name</key>
-	<string>Make ics</string>
+	<string>Make ICS</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>
