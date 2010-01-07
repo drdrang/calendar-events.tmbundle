@@ -14,19 +14,39 @@ print '''BEGIN:VCALENDAR
 VERSION:2.0'''
 
 for line in sys.stdin:
+  # Assign the fields; skip if there aren't 5 fields.
   try:
     event, sdtime, dur, place, desc = line.strip().split('|')
+  except:
+    print '!' * 20 + ' This event has the wrong number of fields'
+    continue
+  # Parse the start time; skip if it's not formatted correctly.
+  try:
     start = parse(sdtime)
-    end = start + relativedelta(hours=+float(dur))
-    print '''BEGIN:VEVENT
-DTSTART:%s
+  except:
+    print '!' * 20 + ' This event has a bad start time'
+    continue
+  # Distinguish between timed and all day events; skip if the duration is bad.
+  if dur == 'all day':
+    end = start + relativedelta(days=+1)
+    dtstart = ';VALUE=DATE:' + start.strftime('%Y%m%d')
+    dtend   = ';VALUE=DATE:' +   end.strftime('%Y%m%d')
+  else:
+    try:
+      end = start + relativedelta(hours=+float(dur))
+      dtstart = ':' + start.strftime('%Y%m%dT%H%M00')
+      dtend   = ':' +   end.strftime('%Y%m%dT%H%M00')
+    except:
+      print '!' * 20 + ' This event has a bad duration'
+      continue
+  
+  print '''BEGIN:VEVENT
+DTSTART%s
 DTEND:%s
 SUMMARY:%s
 LOCATION:%s
 DESCRIPTION:%s
-END:VEVENT''' % (start.strftime('%Y%m%dT%H%M00'), end.strftime('%Y%m%dT%H%M00'), event, place, desc)
-  except:
-    continue
+END:VEVENT''' % (dtstart, dtend, event, place, desc)
 
 print 'END:VCALENDAR'
 </string>

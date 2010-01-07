@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${1:Event}|${2:`date +%m/%d`}/${3:`date +%y`} ${4:9:00 am}|${5:1.00}|${6:Location}|${7:Notes}$0</string>
+	<string>${1:Event}|${2:`date +%m/%d`}/${3:`date +%y`}|all day|${6:Location}|${7:Notes}$0</string>
 	<key>name</key>
-	<string>Timed event</string>
+	<string>All day event</string>
 	<key>scope</key>
 	<string>text.tabular.events</string>
 	<key>tabTrigger</key>
-	<string>ev</string>
+	<string>ad</string>
 	<key>uuid</key>
-	<string>EB8C24E5-30CB-44B9-BC34-2E9D9E7BC45C</string>
+	<string>433C51EA-E128-416E-83D0-1EC6E1DEB398</string>
 </dict>
 </plist>
