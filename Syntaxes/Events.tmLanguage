@@ -6,8 +6,6 @@
 	<array>
 		<string>evt</string>
 	</array>
-	<key>firstLineMatch</key>
-	<string>^#Events</string>
 	<key>keyEquivalent</key>
 	<string>^~E</string>
 	<key>name</key>
@@ -49,15 +47,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>heading</key>
-		<dict>
-			<key>begin</key>
-			<string>^#Events</string>
-			<key>end</key>
-			<string>$</string>
-			<key>name</key>
-			<string>meta.tabular.row.heading.events</string>
-		</dict>
 		<key>row</key>
 		<dict>
 			<key>begin</key>
@@ -86,38 +75,13 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#heading</string>
+					<string>#row</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>(\n)</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.separator.table.row.events</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>
-						everything after the first row is not a heading
-					</string>
-					<key>end</key>
-					<string>^$not possible$^</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#row</string>
-						</dict>
-						<dict>
-							<key>match</key>
-							<string>\n</string>
-							<key>name</key>
-							<string>punctuation.separator.table.row.events</string>
-						</dict>
-					</array>
+					<key>match</key>
+					<string>\n</string>
+					<key>name</key>
+					<string>punctuation.separator.table.row.events</string>
 				</dict>
 			</array>
 		</dict>

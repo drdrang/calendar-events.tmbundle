@@ -39,7 +39,7 @@ print 'END:VCALENDAR'
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>scope</key>
-	<string>text.tabular.psv</string>
+	<string>text.tabular.events</string>
 	<key>uuid</key>
 	<string>86FC5CCE-33EA-4EA6-B3B7-9FC73FA1FFA2</string>
 </dict>

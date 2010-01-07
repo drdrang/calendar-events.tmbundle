@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>Event</string>
 	<key>scope</key>
-	<string>text.tabular.psv</string>
+	<string>text.tabular.events</string>
 	<key>tabTrigger</key>
 	<string>ev</string>
 	<key>uuid</key>
