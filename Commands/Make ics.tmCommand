@@ -34,14 +34,14 @@ for line in sys.stdin:
   else:
     try:
       end = start + relativedelta(hours=+float(dur))
-      dtstart = ':' + start.strftime('%Y%m%dT%H%M00')
-      dtend   = ':' +   end.strftime('%Y%m%dT%H%M00')
+      dtstart = start.strftime('%Y%m%dT%H%M00')
+      dtend   = end.strftime('%Y%m%dT%H%M00')
     except:
       print '!' * 20 + ' This event has a bad duration'
       continue
   
   print '''BEGIN:VEVENT
-DTSTART%s
+DTSTART:%s
 DTEND:%s
 SUMMARY:%s
 LOCATION:%s
